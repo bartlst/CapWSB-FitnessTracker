@@ -6,7 +6,6 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import pl.wsb.fitnesstracker.event.Event;
 import java.time.LocalDate;
 
 @Entity
@@ -32,14 +31,6 @@ public class User {
 
     @Column(nullable = false, unique = true)
     private String email;
-
-    @ManyToMany
-    @JoinTable(
-            name = "user_event",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "event_id")
-    )
-    private Event events;
 
     public User(
             final String firstName,

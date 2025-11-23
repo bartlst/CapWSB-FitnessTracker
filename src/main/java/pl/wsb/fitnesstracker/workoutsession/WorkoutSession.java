@@ -10,7 +10,7 @@ import pl.wsb.fitnesstracker.training.api.Training;
  
 
 @Entity
-@Table(name = "workout_sessions")
+@Table(name = "workout_session")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString

@@ -40,13 +40,6 @@ public class Event {
     @Column(name = "city", nullable = false)
     private String city;
 
-    @ManyToMany
-    @JoinTable(
-            name = "user_event",
-            joinColumns = @JoinColumn(name = "event_id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id")
-    )
-    private User users;
 
 
     public Event(
