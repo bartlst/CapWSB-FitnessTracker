@@ -8,6 +8,11 @@ import lombok.ToString;
 
 import java.time.LocalDate;
 
+/**
+ * Entity representing a user in the fitness tracker system.
+ * This class is mapped to the "users" table in the database.
+ * It contains basic user information such as name, birthdate, and email.
+ */
 @Entity
 @Table(name = "users")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -37,6 +42,8 @@ public class User {
             final LocalDate birthdate,
             final String email) {
 
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.birthdate = birthdate;
         this.email = email;
     }

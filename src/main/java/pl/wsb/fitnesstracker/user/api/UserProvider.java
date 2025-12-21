@@ -1,8 +1,15 @@
 package pl.wsb.fitnesstracker.user.api;
 
+
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Provider interface for retrieving user information.
+ * <p>
+ * This interface defines methods for fetching user data based on different criteria,
+ * such as user ID or email address.
+ */
 public interface UserProvider {
 
     /**
@@ -21,7 +28,7 @@ public interface UserProvider {
      * @param email The email of the user to be searched
      * @return An {@link Optional} containing the located user, or {@link Optional#empty()} if not found
      */
-    Optional<User> getUserByEmail(String email);
+    List<UserEmailDto> getUserByEmail(String email);
 
     /**
      * Retrieves all users.
